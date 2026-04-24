@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hello from Kubernetes</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #0f1117;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      color: #e2e8f0;
+    }
+
+    .card {
+      background: #1a1d27;
+      border: 1px solid #2d3148;
+      border-radius: 12px;
+      padding: 2.5rem 3rem;
+      max-width: 480px;
+      width: 90%;
+      text-align: center;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    }
+
+    .badge {
+      display: inline-block;
+      background: #1e3a5f;
+      color: #60a5fa;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      margin-bottom: 1.25rem;
+    }
+
+    h1 {
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 0.75rem;
+      color: #f1f5f9;
+    }
+
+    h1 span { color: #60a5fa; }
+
+    p {
+      font-size: 0.95rem;
+      color: #94a3b8;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    .meta {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      background: #13151e;
+      border: 1px solid #2d3148;
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      text-align: left;
+      font-size: 0.82rem;
+    }
+
+    .meta-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .meta-label { color: #64748b; }
+    .meta-value { color: #7dd3fc; font-family: 'Courier New', monospace; }
+
+    .divider {
+      height: 1px;
+      background: #2d3148;
+      margin: 1.5rem 0;
+    }
+
+    .footer {
+      font-size: 0.75rem;
+      color: #475569;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="badge">Running on Kubernetes</div>
+    <h1>Hello from <span>Kind</span> &#x2388;</h1>
+    <p>This static page is served by <strong>Nginx</strong> inside a Pod, managed by a Deployment, exposed via a NodePort Service.</p>
+
+    <div class="meta">
+      <div class="meta-row">
+        <span class="meta-label">Cluster</span>
+        <span class="meta-value">nginx-cluster (Kind)</span>
+      </div>
+      <div class="meta-row">
+        <span class="meta-label">Image</span>
+        <span class="meta-value">nginx:alpine</span>
+      </div>
+      <div class="meta-row">
+        <span class="meta-label">Service</span>
+        <span class="meta-value">NodePort :30080</span>
+      </div>
+      <div class="meta-row">
+        <span class="meta-label">Replicas</span>
+        <span class="meta-value">2</span>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+    <p class="footer">proj1 &mdash; Beginner DevOps &bull; KIET CSE</p>
+  </div>
+</body>
+</html>
